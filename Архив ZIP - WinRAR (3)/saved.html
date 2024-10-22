@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное - Rick and Morty</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <img class="kek" src="Снимок экрана 2024-06-11 231443.png" alt="Rick and Morty Logo" onclick="window.location.href='index.html'">
+        <nav> 
+            <ul> 
+                <li class="active" onclick="window.location.href='index.html'">Главная</li>
+                <li class="active" onclick="window.location.href='saved.html'">Избранное</li> 
+                <li class="active" onclick="window.location.href='about.html'">О проекте</li> 
+            </ul> 
+        </nav>
+        <div class="auth-buttons">
+            <button id="registerBtn">Регистрация</button>
+            <button id="loginBtn">Войти</button>
+            <button id="logoutBtn" style="display: none;">Выйти</button>
+            <span id="usernameDisplay"></span>
+            <p id="loginError" style="color: red; display: none;">Неправильный логин или пароль</p>
+        </div>
+    </header>
+    <main>
+        <h3>Избранные персонажи</h3>
+        <div id="favoriteCards"></div>
+    </main>
+    <script src="saved.js"></script>
+</body>
+</html>

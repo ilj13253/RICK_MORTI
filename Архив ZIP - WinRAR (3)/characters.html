@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи - Rick and Morty</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img class="kek" src="Снимок экрана 2024-06-11 231443.png" alt="" onclick="window.location.href='index.html'">
+        <nav>
+            <ul>
+                <li class="active" onclick="window.location.href='index.html'">Главная</li>
+                <li class="active">Избранное</li>
+                <li class="active" onclick="window.location.href='about.html'">О проекте</li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="registerBtn">Регистрация</button>
+            <button id="loginBtn">Войти</button>
+            <button id="logoutBtn" style="display: none;">Выйти</button>
+            <span id="usernameDisplay"></span>
+            <p id="loginError" style="color: red; display: none;">Неправильный логин или пароль</p>
+        </div>
+    </header>
+    <main>
+        <h3>Список персонажей</h3>
+        <div class="search-bar">
+            <input type="text" id="searchName" placeholder="Введите имя персонажа">
+            <input type="text" id="searchRace" placeholder="Введите расу персонажа">
+            <select id="searchStatus">
+                <option value="" selected>Выберите статус персонажа</option>
+                <option value="Alive">Живой</option>
+                <option value="unknown">Неизвестно</option>
+                <option value="Dead">Мертв</option>
+            </select>
+            <button id="searchBtn">Поиск</button>
+        </div>
+        <div id="characterCards" class="character-grid"></div>
+        <div class="pagination">
+            <button id="prevBtn">Предыдущая</button>
+            <div id="pageNumbers"></div>
+            <button id="nextBtn">Следующая</button>
+        </div>
+    </main>
+    <script src="characters.js"></script>
+</body>
+</html>

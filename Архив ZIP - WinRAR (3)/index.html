@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img class="kek" src="Снимок экрана 2024-06-11 231443.png" alt="" onclick="window.location.href='index.html'">
+        <nav> 
+            <ul> 
+              <li class="active" onclick="window.location.href='index.html'">Главная</li>
+              <li class="active" onclick="window.location.href='saved.html'"> Избранное</li> 
+              <li class="active" id="activ" onclick="window.location.href='about.html'">О проекте</li> 
+            </ul> 
+          </nav>
+        <div class="auth-buttons">
+            <button id="registerBtn">Регистрация</button>
+            <button id="loginBtn">Войти</button>
+            <button id="logoutBtn" style="display: none;">Выйти</button>
+<span id="usernameDisplay"></span>
+        </div>
+    </header>
+    <main>
+        <div class="card" id="characters" onclick="window.location.href='characters.html'">
+    <img src="Снимок экрана 2024-06-11 230527.png" alt="Персонажи">
+    <h3>Персонажи</h3>
+    <p>Зайди и познакомься со всеми персонажами вселенной</p>
+</div>
+
+        <div class="card" id="locations" onclick="window.location.href='location.html'">
+            <img src="Снимок экрана 2024-06-11 230740.png" alt="Локации">
+            <h3>Локации</h3>
+            <p>Исследуй все локации. Давай же, не будь занудой!</p>
+        </div>
+        <div class="card" id="episodes" onclick="window.location.href='episode.html'">
+            <img src="Снимок экрана 2024-06-11 230808.png" alt="Эпизоды">
+            <h3>Эпизоды</h3>
+            <p>Узнай чуть больше о карте приключений Рика и Морти</p>
+        </div>
+        <div id="charactersList" style="display: none;">
+            <h3>Список персонажей</h3>
+            <div id="characterCards"></div>
+        </div>
+    </main>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeRegister">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <label for="regEmail">Введите E-mail:</label>
+                <input type="email" id="regEmail" name="regEmail" required>
+                
+                <label for="regUsername">Придумайте логин:</label>
+                <input type="text" id="regUsername" name="regUsername" required>
+                
+                <label for="regName">Введите имя:</label>
+                <input type="text" id="regName" name="regName" required>
+
+                <label for="regLast">Введите Фамилию:</label>
+                <input type="text" id="regLast" name="regLast" required>
+
+                <label for="regPassword">Введите пароль:</label>
+                <input type="password" id="regPassword" name="regPassword" required>
+                <!--a href="#" class="toggle-password" onclick="togglePasswordVisibility('regPassword')"></a-->
+
+                <label for="regPasswordRepeat">Повторите пароль:</label>
+                <input type="password" id="regPasswordRepeat" name="regPasswordRepeat" required>
+                <!--a href="#" class="toggle-password" onclick="togglePasswordVisibility('regPassword')"></a-->
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Войти</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Логин:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Пароль:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                
+                <button type="submit">Войти</button>
+                <p id="loginError" style="color: red; display: none;">Неправильный логин или пароль</p>
+                
+            </form>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
+        
+          <!--div id="mainContent"> 
+            <p>Это главная страница</p> 
+          </div>
+        
+          <div id="aboutContent" style="display: none;"> 
+            <p>Это страница о проекте</p> 
+          </div-->

@@ -1,0 +1,405 @@
+/*
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: url('icons8-курсор-20.png'), auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+nav .active {
+    color: red;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card2 {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card2 img {
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    left: 150px;
+}
+
+button[type="submit"]:hover {
+    background-color: black;
+    justify-content: center;
+    text-align: center;
+}
+
+.character-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+}
+
+.character-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#registerBtn {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #000000;
+    width: 188px;
+}
+
+#loginBtn {
+    background-color: #000000;
+    color: #fff;
+    width: 123.57px;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+.dddd {
+    cursor: url('icons8-курсор-50.png'), auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dddd:hover {
+    transform: scale(1.05);
+}
+
+.xxx {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+#usernameDisplay {
+    display: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.backk {
+    font-size: 18px;
+}
+
+.favorite-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00A3FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+}
+
+.favorite-btn:hover {
+    background-color: #0080ff;
+}
+
+.kek {
+    width: 112px;
+    height: 112px;
+    top: 38px;
+    left: 135px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.menu {
+    position: relative;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    font-size: 64px;
+    background-color: red;
+    width: 34px;
+    height: 55px;
+}
+
+.menu-toggle .close {
+    display: none;
+}
+
+.menu.open .menu-toggle .hamburger {
+    display: none;
+}
+
+.menu.open .menu-toggle .close {
+    display: inline;
+}
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.kek {
+    width: 50px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+nav .active {
+    color: red;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input,
+.search-bar select,
+.search-bar button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.character-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.character-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+    width: 150px;
+}
+
+.character-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.favorite-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00A3FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.favorite-btn:hover {
+    background-color: #0080ff;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
